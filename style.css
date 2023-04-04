@@ -1,0 +1,14 @@
+.code-matrix, .text-matrix {
+  display: grid;
+  grid-template-areas: "h h" "input1 input2" "input3 input4" ;
+}
+
+
+
+.code-matrix1, .text-matrix1 {
+  grid-area: input;
+}
+
+.code-matrix__text, .text-matrix__text{
+    grid-area: h;
+}

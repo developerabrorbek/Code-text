@@ -14,28 +14,43 @@
 <body>
     <main>
         <div class="container">
-            <form id="form">
+            <form class="form matrix-form">
+                <div class="form-row gap-5">
+                    <div class="col mt-4 code-matrix">
+                            <h3 class="numbers mb-4 code-matrix__text">Bu yerga kalit matritsani kiriting:</h3>
+                            <input type="text" class="form-control mb-4" placeholder="matrix el 1" name="matrix1">
+                            <input type="text" class="form-control mb-4" placeholder="matrix el 2" name="matrix2">
+                            <input type="text" class="form-control mb-4" placeholder="matrix el 3" name="matrix3">
+                            <input type="text" class="form-control mb-4" placeholder="matrix el 4" name="matrix4">
+                    </div>
+                    
+                </div>
+
                 <div class="form-row gap-5 d-grid">
                     <div class="col mt-4">
                         <h3 class="text mb-3">Bu yerga matn kiriting:</h3>
-                        <input type="text" class="form-control" placeholder="Text to code">
+                        <input type="text" class="form-control" placeholder="Text to code" name="text">
                     </div>
-                    <button class="btn btn-primary w-25" type="submit">Submit</button>
                 </div>
-            </form>
-            <form id="form-second">
+
                 <div class="form-row gap-5">
                     <div class="col mt-4">
                             <h3 class="numbers mb-4">Bu yerga kodni kiriting:</h3>
-                            <input type="text" class="form-control mb-4" placeholder="Code to text">
+                            <input type="text" class="form-control mb-4 input-code" placeholder="Code to text" name="code">
                     </div>
-                    <button class="btn btn-primary w-25" type="submit">Submit</button>
                 </div>
+                
+                <button class="btn btn-primary w-25" type="submit">Submit</button>
             </form>
 
             <div class="result mt-5">
                 <div class="h4">Sizning natijangiz:</div>
                 <p class="text text-primary result-text"></p>
+            </div>
+
+            <div class="result mt-5">
+                <div class="h4">Sizning natijangiz(kodni matnga):</div>
+                <p class="text text-primary result-text2"></p>
             </div>
         </div>
     </main>
