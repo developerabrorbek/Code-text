@@ -186,7 +186,6 @@ elFormMatrix.addEventListener("submit", (evt) => {
 // ------------- Code to text begin ----------------------
   
     const arr = evt.target.code.value.split(" ");
-    // console.log(arr);
     
   
     if(arr.length % 2 == 1) arr.push('0');
@@ -213,7 +212,6 @@ elFormMatrix.addEventListener("submit", (evt) => {
 
     const resultArr2 = [];
 
-    console.log(codeMultiplyArr);
 
       for(let j=0; j<arr.length/2; j++){
           resultArr2.push(Math.round(codeMultiplyArr[0][j]))
