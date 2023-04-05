@@ -27,7 +27,7 @@ function multiply(m1, m2, mat1, n1, n2, mat2) {
     for (j = 0; j < n2; j++) {
       res[i][j] = 0;
       for (x = 0; x < m2; x++) {
-        res[i][j] += Math.round(mat1[i][x] * mat2[x][j]);
+        res[i][j] += mat1[i][x] * mat2[x][j];
       }
     }
   }
@@ -204,18 +204,20 @@ elFormMatrix.addEventListener("submit", (evt) => {
   
       const reverseKeyMatrix = twoDimensionArray(2,2);
       const _D = (a*d) - (b*c)
-      reverseKeyMatrix[0][0] = +d/_D; 
+      reverseKeyMatrix[0][0] = d/_D; 
       reverseKeyMatrix[0][1] = -b/_D; 
       reverseKeyMatrix[1][0] = -c/_D; 
-      reverseKeyMatrix[1][1] = +a/_D; 
+      reverseKeyMatrix[1][1] = a/_D; 
 
      const codeMultiplyArr = multiply(2,2,reverseKeyMatrix,2,codeArr[0].length,codeArr)
 
     const resultArr2 = [];
 
+    console.log(codeMultiplyArr);
+
       for(let j=0; j<arr.length/2; j++){
-          resultArr2.push(codeMultiplyArr[0][j])
-          resultArr2.push(codeMultiplyArr[1][j]) 
+          resultArr2.push(Math.round(codeMultiplyArr[0][j]))
+          resultArr2.push(Math.round(codeMultiplyArr[1][j])) 
       }
 
     const textArr = [];
